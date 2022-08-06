@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Number = +prompt("Mời bạn nhập vô !", "");
+        let check = true;
+        if (Number < 2) { check = false; } else {
+            for (let i = 2; i <= Math.sqrt(Number - 1); i++) {
+                if (Number % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        if (check) {
+            document.write(Number + " là số nguyên tố");
+        } else {
+            document.write(Number + "không phải là só nguyên tố");
+        }
+    </script>
+</body>
+
+</html>
